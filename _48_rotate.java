@@ -1,5 +1,6 @@
-class Solution {
-    public void fun1(int[][] matrix) {
+class _48_rotate {
+    public void rotate(int[][] matrix) {
+
         /*
          * 2022-10-03 18:18:36
          * 0 ms (100.00%)
@@ -49,9 +50,5 @@ class Solution {
             }
         }
 
-    }
-
-    public void rotate(int[][] matrix) {
-        fun1(matrix);
     }
 }

@@ -1,7 +1,7 @@
 import java.util.HashSet;
 import java.util.Set;
 
-class Solution {
+class _36_isValidSudoku {
     private boolean isDistinct(char[][] board, int rowStart, int rowLength, int colStart, int colLength) {
         /*
          * 2022-10-03 18:52:23
@@ -23,8 +23,7 @@ class Solution {
         return true;
     }
 
-    public boolean fun1(char[][] board) {
-
+    public boolean isValidSudoku(char[][] board) {
         int nN = 9;
         int partK = 3;
 
@@ -53,9 +52,5 @@ class Solution {
 
         return true;
 
-    }
-
-    public boolean isValidSudoku(char[][] board) {
-        return fun1(board);
     }
 }

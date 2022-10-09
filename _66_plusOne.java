@@ -1,5 +1,6 @@
-class Solution {
-    public int[] fun1(int[] digits) {
+class _66_plusOne {
+    public int[] plusOne(int[] digits) {
+
         /*
          * 2022-10-03 16:27:50
          * 0 ms (100.00%)
@@ -41,9 +42,5 @@ class Solution {
             }
             return rslt;
         }
-    }
-
-    public int[] plusOne(int[] digits) {
-        return fun1(digits);
     }
 }

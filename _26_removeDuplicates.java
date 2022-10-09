@@ -1,6 +1,6 @@
-class Solution {
+class _26_removeDuplicates {
+    public int removeDuplicates(int[] nums) {
 
-    private int fun1(int[] nums) {
         /*
          * 2022-10-03 10:57:42
          * time: 0 ms (100.00%)
@@ -29,20 +29,10 @@ class Solution {
         }
 
         return slow + 1;
-
-    }
-
-    public int removeDuplicates(int[] nums) {
-
-        return fun1(nums);
-
     }
 
     public static void main(String[] args) {
-        Solution solution = new Solution();
-
         int[] inp = { 1, 2, 3 };
-
-        System.out.println("removeDuplicates: " + solution.removeDuplicates(inp));
+        System.out.println("removeDuplicates: " + new _26_removeDuplicates().removeDuplicates(inp));
     }
 }

@@ -1,5 +1,5 @@
-class Solution {
-    public void fun1(int[] nums) {
+class _283_moveZeroes {
+    public void moveZeroes(int[] nums) {
         /*
          * 2022-10-03 16:36:41
          * 1 ms (100.00%)
@@ -12,23 +12,19 @@ class Solution {
         while (fast < nums.length) {
 
             if (nums[fast] != 0) {
-                nums[slow +1] = nums[fast];
+                nums[slow + 1] = nums[fast];
 
-                slow ++;
-                fast ++;
+                slow++;
+                fast++;
             } else {
-                fast ++;
+                fast++;
             }
 
         }
 
-        for (int i=slow +1; i < nums.length; i++){
+        for (int i = slow + 1; i < nums.length; i++) {
             nums[i] = 0;
         }
 
-    }
-
-    public void moveZeroes(int[] nums) {
-        fun1(nums);
     }
 }

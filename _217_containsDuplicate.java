@@ -1,8 +1,8 @@
 import java.util.HashSet;
 import java.util.Set;
 
-class Solution {
-    public boolean fun1(int[] nums) {
+class _217_containsDuplicate {
+    public boolean containsDuplicate(int[] nums) {
         /*
          * 2022-10-03 15:37:49
          * time: 7 ms (74.58%)
@@ -22,9 +22,5 @@ class Solution {
 
         return false;
 
-    }
-
-    public boolean containsDuplicate(int[] nums) {
-        return fun1(nums);
     }
 }

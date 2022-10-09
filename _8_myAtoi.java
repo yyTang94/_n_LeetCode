@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-class Solution {
+class _8_myAtoi {
     private int[] int2seq(int x) {
         boolean isNegative;
         if (x < 0) {
@@ -99,7 +99,8 @@ class Solution {
         return n;
     }
 
-    public int fun1(String s) {
+    public int myAtoi(String s) {
+
         /*
          * 2022-10-07 16:02:56 -> 2022-10-07 17:14:06
          * 2 ms (28.31%)
@@ -162,9 +163,5 @@ class Solution {
         }
 
         return seq2Int(seq, isNegative);
-    }
-
-    public int myAtoi(String s) {
-        return fun1(s);
     }
 }

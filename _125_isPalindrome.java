@@ -1,5 +1,6 @@
-class Solution {
-    public boolean fun1(String s) {
+class _125_isPalindrome {
+    public boolean isPalindrome(String s) {
+
         /*
          * 2 ms (96.48%)
          * 41.4 MB (70.12%)
@@ -28,9 +29,5 @@ class Solution {
         }
         return true;
 
-    }
-
-    public boolean isPalindrome(String s) {
-        return fun1(s);
     }
 }

@@ -1,5 +1,5 @@
-class Solution {
-    public int fun1(int[] nums) {
+class _136_singleNumber {
+    public int singleNumber(int[] nums) {
         /*
          * 2022-10-03 18:57:42
          * 1 ms (99.97%)
@@ -11,9 +11,5 @@ class Solution {
         }
 
         return rslt;
-    }
-
-    public int singleNumber(int[] nums) {
-        return fun1(nums);
     }
 }

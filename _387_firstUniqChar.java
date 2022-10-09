@@ -1,5 +1,6 @@
-class Solution {
-    public int fun1(String s) {
+class _387_firstUniqChar {
+    public int firstUniqChar(String s) {
+
         /*
          * 2022-10-06 21:35:51 -> 2022-10-06 21:51:40
          * 44 ms (5.19%)
@@ -22,9 +23,5 @@ class Solution {
         }
 
         return -1;
-    }
-
-    public int firstUniqChar(String s) {
-        return fun1(s);
     }
 }

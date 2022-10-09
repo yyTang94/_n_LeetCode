@@ -1,8 +1,9 @@
 import java.util.HashSet;
 import java.util.Set;
 
-class Solution {
-    public int fun20221002(String s) {
+class _3_lengthOfLongestSubstring {
+    public int lengthOfLongestSubstring(String s) {
+
         /*
          * time: 5 ms (60.20%)
          * memory: 41.9 MB (17.89%)
@@ -26,7 +27,7 @@ class Solution {
                     window.remove(s.charAt(start));
                     start++;
                     length--;
-                    
+
                 }
             }
             if (length > maxLength) {
@@ -36,9 +37,5 @@ class Solution {
 
         return maxLength;
 
-    }
-
-    public int lengthOfLongestSubstring(String s) {
-        return fun20221002(s);
     }
 }

@@ -1,5 +1,6 @@
-class Solution {
-    private int fun1(int[] prices) {
+class _122_maxProfit {
+    public int maxProfit(int[] prices) {
+
         /*
          * 2022-10-03 11:59:52
          * time: 0 ms (100.00%)
@@ -59,12 +60,6 @@ class Solution {
         }
 
         return earn;
-
-    }
-
-    public int maxProfit(int[] prices) {
-
-        return fun1(prices);
 
     }
 }

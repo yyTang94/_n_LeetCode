@@ -1,8 +1,8 @@
 import java.util.HashMap;
 import java.util.Map;
 
-class Solution {
-    public int[] fun1(int[] nums1, int[] nums2) {
+class _350_intersect {
+    public int[] intersect(int[] nums1, int[] nums2) {
         /*
          * 2022-10-03 16:14:10
          * time: 4 ms (20.71%)
@@ -45,10 +45,5 @@ class Solution {
         }
 
         return rslt;
-
-    }
-
-    public int[] intersect(int[] nums1, int[] nums2) {
-        return fun1(nums1, nums2);
     }
 }

@@ -1,8 +1,8 @@
 import java.util.HashMap;
 import java.util.Map;
 
-class Solution {
-    public boolean fun1(String s, String t) {
+class _242_isAnagram {
+    public boolean isAnagram(String s, String t) {
         /*
          * 2022-10-06 22:00:15 -> 2022-10-06 22:37:18
          * 16 ms (11.78%)
@@ -35,9 +35,5 @@ class Solution {
         }
 
         return true;
-    }
-
-    public boolean isAnagram(String s, String t) {
-        return fun1(s, t);
     }
 }

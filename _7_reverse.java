@@ -1,6 +1,4 @@
-import java.util.Arrays;
-
-class Solution {
+class _7_reverse {
     private int[] int2seq(int x) {
         boolean isNegative;
         if (x < 0) {
@@ -32,7 +30,7 @@ class Solution {
 
     }
 
-    public int fun1(int x) {
+    public int reverse(int x) {
         /*
          * 2022-10-06 17:33:05
          * 1 ms (41.10%)
@@ -104,13 +102,7 @@ class Solution {
 
     }
 
-    public int reverse(int x) {
-        return fun1(x);
-    }
-
     public static void main(String[] args) {
-        Solution solution = new Solution();
-
-        System.out.println("Hello World" + solution.reverse(-2147483412));
+        System.out.println("Hello World" + new _7_reverse().reverse(-2147483412));
     }
 }

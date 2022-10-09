@@ -1,7 +1,5 @@
-import javax.xml.crypto.dsig.keyinfo.RetrievalMethod;
-
-class Solution {
-    public void fun1(int[] nums, int k) {
+class _189_rotate {
+    public void rotate(int[] nums, int k) {
         /*
          * 2022-10-03 15:28:45
          * time: 1 ms (64.12%)
@@ -23,9 +21,5 @@ class Solution {
             nums[i] = bufK[i];
         }
 
-    }
-
-    public void rotate(int[] nums, int k) {
-        fun1(nums, k);
     }
 }

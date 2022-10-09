@@ -1,5 +1,6 @@
-class Solution {
-    public int fun1(String haystack, String needle) {
+class _28_strStr {
+    public int strStr(String haystack, String needle) {
+
         /*
          * 2022-10-07 18:46:45 -> 2022-10-08 13:12:52
          * 1 ms (40.39%)
@@ -28,9 +29,5 @@ class Solution {
         }
 
         return -1;
-    }
-
-    public int strStr(String haystack, String needle) {
-        return fun1(haystack, needle);
     }
 }

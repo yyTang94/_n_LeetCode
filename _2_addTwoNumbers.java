@@ -1,14 +1,3 @@
-/**
- * Definition for singly-linked list.
- * public class ListNode {
- * int val;
- * ListNode next;
- * ListNode() {}
- * ListNode(int val) { this.val = val; }
- * ListNode(int val, ListNode next) { this.val = val; this.next = next; }
- * }
- */
-
 class ListNode {
     int val;
     ListNode next;
@@ -26,8 +15,9 @@ class ListNode {
     }
 }
 
-class Solution {
-    public ListNode fun20221002(ListNode l1, ListNode l2) {
+class _2_addTwoNumbers {
+    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+
         /*
          * time: 1 ms (100.00%)
          * memory: 41.3 MB (86.31%)
@@ -77,16 +67,8 @@ class Solution {
         }
 
         return rslt.next;
-
-    }
-
-    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
-        return fun20221002(l1, l2);
     }
 
     public static void main(String[] args) {
-        Solution solution = new Solution();
-
-        int[] inp = { 9, 9, 9, 9, 9, 9, 9 };
     }
 }
