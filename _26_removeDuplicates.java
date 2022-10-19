@@ -1,38 +1,26 @@
 class _26_removeDuplicates {
     public int removeDuplicates(int[] nums) {
+        // pre check
+        if (nums.length <= 1) {
+            return nums.length;
+        }
 
-        /*
-         * 2022-10-03 10:57:42
-         * time: 0 ms (100.00%)
-         * memory: 42.7 MB (96.84%)
-         */
-
-        int slow = -1;
+        // first frame
+        int slow = 0;
         int fast = 0;
-
-        while (fast < nums.length) {
-
-            if (slow < 0) {
+        while (fast != nums.length - 1) {
+            fast++;
+            if (nums[fast] != nums[slow]) {
                 slow++;
-                fast++;
-            } else {
-                if (nums[fast] != nums[slow]) {
-                    nums[slow + 1] = nums[fast];
-
-                    slow++;
-                    fast++;
-                } else {
-                    fast++;
-                }
+                nums[slow] = nums[fast];
             }
-
         }
 
         return slow + 1;
     }
 
     public static void main(String[] args) {
-        int[] inp = { 1, 2, 3 };
+        int[] inp = { 1, 1, 2, 2, 3, 4, 4 };
         System.out.println("removeDuplicates: " + new _26_removeDuplicates().removeDuplicates(inp));
     }
 }
