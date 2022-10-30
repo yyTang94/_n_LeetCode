@@ -1,5 +1,3 @@
-import java.util.Currency;
-
 class ListNode {
     int val;
     ListNode next;
