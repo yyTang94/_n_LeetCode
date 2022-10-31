@@ -1,7 +1,7 @@
 import java.util.HashMap;
 import java.util.Map;
 
-class _242_isAnagram {
+class _242_isAnagram { // 有效的字母异位词
     public boolean isAnagram(String s, String t) {
         /*
          * 2022-10-06 22:00:15 -> 2022-10-06 22:37:18

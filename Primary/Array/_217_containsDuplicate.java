@@ -1,7 +1,7 @@
 import java.util.HashSet;
 import java.util.Set;
 
-class _217_containsDuplicate {
+class _217_containsDuplicate { // 存在重复元素
     public boolean containsDuplicate(int[] nums) {
         /*
          * 2022-10-03 15:37:49

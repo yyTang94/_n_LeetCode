@@ -1,4 +1,4 @@
-class _125_isPalindrome {
+class _125_isPalindrome { // 验证回文串
     public boolean isPalindrome(String s) {
 
         /*

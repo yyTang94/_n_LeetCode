@@ -1,4 +1,4 @@
-class _14_longestCommonPrefix {
+class _14_longestCommonPrefix { // 最长公共前缀
     public String longestCommonPrefix(String[] strs) {
         // pre-check
         if (strs == null || strs.length == 0) {

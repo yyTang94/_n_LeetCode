@@ -1,7 +1,7 @@
 import java.util.HashSet;
 import java.util.Set;
 
-class _36_isValidSudoku {
+class _36_isValidSudoku { // 有效的数独
     private boolean isDistinct(char[][] board, int rowStart, int rowLength, int colStart, int colLength) {
         /*
          * 2022-10-03 18:52:23

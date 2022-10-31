@@ -2,7 +2,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
-class _1_twoSum {
+class _1_twoSum { // 两数之和
     public int[] twoSum(int[] nums, int target) {
         int[] abIdx = new int[2];
 

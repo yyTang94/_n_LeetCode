@@ -1,4 +1,4 @@
-class _189_rotate {
+class _189_rotate { // 旋转数组, 轮转数组
     public void rotate(int[] nums, int k) {
         /*
          * 2022-10-03 15:28:45

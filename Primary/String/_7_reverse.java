@@ -1,4 +1,4 @@
-class _7_reverse {
+class _7_reverse { // 整数反转
     private int[] int2seq(int x) {
         boolean isNegative;
         if (x < 0) {

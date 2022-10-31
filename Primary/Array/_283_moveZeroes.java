@@ -1,4 +1,4 @@
-class _283_moveZeroes {
+class _283_moveZeroes { // 移动零
     public void moveZeroes(int[] nums) {
         // pre check
         if (nums == null || nums.length == 0) {

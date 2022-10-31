@@ -1,4 +1,4 @@
-class _387_firstUniqChar {
+class _387_firstUniqChar { // 字符串中的第一个唯一字符
     public int firstUniqChar(String s) {
 
         /*

@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-class _8_myAtoi {
+class _8_myAtoi { // 字符串转换整数 (atoi)
     private int[] int2seq(int x) {
         boolean isNegative;
         if (x < 0) {

@@ -1,4 +1,4 @@
-class _48_rotate {
+class _48_rotate { // 旋转图像
     public void rotate(int[][] matrix) {
 
         /*

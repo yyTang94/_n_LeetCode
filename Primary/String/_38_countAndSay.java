@@ -1,4 +1,4 @@
-class _38_countAndSay {
+class _38_countAndSay { // 外观数列
     public String countAndSay(int n) {
         // pre check
         if (n == 1) {

@@ -1,7 +1,7 @@
 import java.util.HashMap;
 import java.util.Map;
 
-class _350_intersect {
+class _350_intersect { // 两个数组的交集 II
     public int[] intersect(int[] nums1, int[] nums2) {
         /*
          * 2022-10-03 16:14:10

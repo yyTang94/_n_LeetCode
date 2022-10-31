@@ -1,4 +1,4 @@
-class _28_strStr {
+class _28_strStr { // 找出字符串中第一个匹配项的下标
     public int strStr(String haystack, String needle) {
 
         /*
