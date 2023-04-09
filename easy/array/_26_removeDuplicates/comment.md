@@ -1,7 +1,34 @@
-package easy.array._26_removeDuplicates;
+# 分析
 
-import java.util.Objects;
+快慢指针
 
+```java
+class Solution {
+    public int removeDuplicates(int[] nums) {
+        // pre check
+        if (nums.length <= 1) {
+            return nums.length;
+        }
+
+        // first frame
+        int slow = 0;
+        int fast = 0;
+        while (fast != nums.length - 1) {
+            fast++;
+            if (nums[fast] != nums[slow]) {
+                slow++;
+                nums[slow] = nums[fast];
+            }
+        }
+
+        return slow + 1;
+    }
+}
+```
+
+查找重复片段
+
+```java
 class Solution {
     /*
      * 查找重复片段（fragment）
@@ -40,9 +67,5 @@ class Solution {
 
         return cachePosition + 1;
     }
-
-    public static void main(String[] args) {
-        int[] inp = { 1, 1, 2 };
-        System.out.println("removeDuplicates: " + new Solution().removeDuplicates(inp));
-    }
 }
+```

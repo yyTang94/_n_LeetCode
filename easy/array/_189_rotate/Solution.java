@@ -1,26 +1,30 @@
 package easy.array._189_rotate;
-class Solution { // 旋转数组, 轮转数组
+
+class Solution {
     public void rotate(int[] nums, int k) {
-        /*
-         * 2022-10-03 15:28:45
-         * time: 1 ms (64.12%)
-         * memory: 57.2 MB (30.20%)
-         */
+        int aggCount = 0;
 
-        k = k % nums.length;
+        for (int i = 0; i < nums.length; i++) {
+            if (aggCount >= nums.length) {
+                break;
+            }
 
-        int[] bufK = new int[k];
-        for (int i = nums.length - k; i < nums.length; i++) {
-            bufK[i - (nums.length - k)] = nums[i];
+            int source = i;
+            int target = (source + k) % nums.length;
+
+            int cache = nums[source];
+
+            do {
+                int temp;
+                temp = nums[target];
+                nums[target] = cache;
+                cache = temp;
+
+                source = target;
+                target = (source + k) % nums.length;
+
+                aggCount++;
+            } while (source != i);
         }
-
-        for (int i = nums.length - k - 1; i >= 0; i--) {
-            nums[i + k] = nums[i];
-        }
-
-        for (int i = 0; i < k; i++) {
-            nums[i] = bufK[i];
-        }
-
     }
 }

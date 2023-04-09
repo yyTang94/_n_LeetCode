@@ -8,6 +8,13 @@
             "type": "java",
             "name": "Solution",
             "request": "launch",
+            "mainClass": "easy.array._26_removeDuplicates.Solution",
+            "projectName": "_n_LeetCode_b2ff088d"
+        },
+        {
+            "type": "java",
+            "name": "Solution",
+            "request": "launch",
             "mainClass": "_328_oddEvenList.Solution",
             "projectName": "_n_LeetCode_b2ff088d"
         },
