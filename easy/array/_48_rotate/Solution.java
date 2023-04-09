@@ -1,4 +1,4 @@
-package _48_rotate;
+package easy.array._48_rotate;
 class Solution { // 旋转图像
     public void rotate(int[][] matrix) {
 

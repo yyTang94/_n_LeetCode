@@ -1,4 +1,4 @@
-package _26_removeDuplicates;
+package easy.array._26_removeDuplicates;
 class Solution {
     public int removeDuplicates(int[] nums) {
         // pre check

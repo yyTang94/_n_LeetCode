@@ -1,4 +1,4 @@
-package _350_intersect;
+package easy.array._350_intersect;
 import java.util.HashMap;
 import java.util.Map;
 

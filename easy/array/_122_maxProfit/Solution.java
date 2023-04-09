@@ -1,4 +1,4 @@
-package _122_maxProfit;
+package easy.array._122_maxProfit;
 class Solution {
     public int maxProfit(int[] prices) {
 

@@ -1,4 +1,4 @@
-package _283_moveZeroes;
+package easy.array._283_moveZeroes;
 class Solution { // 移动零
     public void moveZeroes(int[] nums) {
         // pre check

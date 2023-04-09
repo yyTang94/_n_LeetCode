@@ -1,4 +1,4 @@
-package _217_containsDuplicate;
+package easy.array._217_containsDuplicate;
 import java.util.HashSet;
 import java.util.Set;
 

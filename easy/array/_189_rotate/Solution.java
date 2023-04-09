@@ -1,4 +1,4 @@
-package _189_rotate;
+package easy.array._189_rotate;
 class Solution { // 旋转数组, 轮转数组
     public void rotate(int[] nums, int k) {
         /*

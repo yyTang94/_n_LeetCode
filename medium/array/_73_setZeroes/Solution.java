@@ -1,4 +1,4 @@
-package _73_setZeroes;
+package medium.array._73_setZeroes;
 class Solution {
     public void setZeroes(int[][] matrix) {
         // pre check

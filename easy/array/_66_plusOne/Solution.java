@@ -1,4 +1,4 @@
-package _66_plusOne;
+package easy.array._66_plusOne;
 class Solution { // 加一
     public int[] plusOne(int[] digits) {
 

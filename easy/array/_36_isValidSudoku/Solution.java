@@ -1,4 +1,4 @@
-package _36_isValidSudoku;
+package easy.array._36_isValidSudoku;
 import java.util.HashSet;
 import java.util.Set;
 
