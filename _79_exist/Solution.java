@@ -1,14 +1,12 @@
 package _79_exist;
 
-import java.util.AbstractMap;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Set;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 class Solution {
     private boolean doExist(char[][] board, Set<String> used, int row, int col, String word) {
@@ -17,41 +15,25 @@ class Solution {
             if (word.length() == 1) {
                 return true;
             } else {
-                List<Map<String, Integer>> preNeighbors = new ArrayList<>();
-                preNeighbors.add(Stream.of(
-                        new AbstractMap.SimpleEntry<>("row", row),
-                        new AbstractMap.SimpleEntry<>("col", col - 1))
-                        .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue)));
-                preNeighbors.add(Stream.of(
-                        new AbstractMap.SimpleEntry<>("row", row),
-                        new AbstractMap.SimpleEntry<>("col", col + 1))
-                        .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue)));
-                preNeighbors.add(Stream.of(
-                        new AbstractMap.SimpleEntry<>("row", row - 1),
-                        new AbstractMap.SimpleEntry<>("col", col))
-                        .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue)));
-                preNeighbors.add(Stream.of(
-                        new AbstractMap.SimpleEntry<>("row", row + 1),
-                        new AbstractMap.SimpleEntry<>("col", col))
-                        .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue)));
+                int[][] neighbors = new int[][] { { row, col - 1 }, { row, col + 1 }, { row - 1, col },
+                        { row + 1, col } };
 
-                List<Map<String, Integer>> neighbors = new ArrayList<>();
-                for (Map<String, Integer> m : preNeighbors) {
-                    if ((0 <= m.get("row") && m.get("row") <= board.length - 1)
-                            && (0 <= m.get("col") && m.get("col") <= board[0].length - 1)
-                            && !used.contains(String.valueOf(m.get("row")) + "-" + String.valueOf(m.get("col")))) {
-                        neighbors.add(m);
-                    }
-                }
+                for (int[] nei : neighbors) {
+                    int nextRow = nei[0];
+                    int nextCol = nei[1];
+                    if ((0 <= nextRow && nextRow <= board.length - 1)
+                            && (0 <= nextCol && nextCol <= board[0].length - 1)
+                            && !used.contains(String.valueOf(nextRow) + "-" + String.valueOf(nextCol))) {
 
-                for (Map<String, Integer> m : neighbors) {
-                    Set<String> nextUsed = new HashSet<>();
-                    nextUsed.addAll(used);
-                    nextUsed.add(String.valueOf(row) + "-" + String.valueOf(col));
-                    boolean flag = doExist(board, nextUsed, m.get("row"), m.get("col"),
-                            word.substring(1, word.length()));
-                    if (flag) {
-                        return true;
+                        char tempChar = board[row][col];
+                        board[row][col] = '.';
+                        boolean flag = doExist(board, used, nextRow, nextCol,
+                                word.substring(1, word.length()));
+                        if (flag) {
+                            return true;
+                        }
+
+                        board[row][col] = tempChar;
                     }
                 }
                 return false;
@@ -78,5 +60,14 @@ class Solution {
         }
 
         return false;
+    }
+
+    public static void main(String[] args) {
+
+        char[][] board = new char[][] { { 'A', 'B', 'C', 'E' }, { 'S', 'F', 'C', 'S' }, { 'A', 'D', 'E', 'E' } };
+        new Solution().exist(board, "ABCCED");
+
+        System.out.println("Hello, World!");
+
     }
 }
