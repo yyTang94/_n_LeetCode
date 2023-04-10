@@ -1,34 +1,70 @@
 package easy.array._1_twoSum;
 
 import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.HashSet;
+import java.util.Objects;
+import java.util.Set;
 
-class Solution { // 两数之和
+class Solution {
     public int[] twoSum(int[] nums, int target) {
-        int[] abIdx = new int[2];
+        // pre check
+        if (Objects.isNull(nums) || nums.length <= 1) {
+            return null;
+        }
 
-        Map<Integer, Integer> num2Idx = new HashMap<>();
-
+        int[] sortedNums = new int[nums.length];
         for (int i = 0; i < nums.length; i++) {
-            int b = nums[i];
-            int a = target - b;
+            sortedNums[i] = nums[i];
+        }
+        Arrays.sort(sortedNums);
 
-            if (num2Idx.containsKey(a)) {
-                abIdx[0] = num2Idx.get(a);
-                abIdx[1] = i;
+        boolean found = false;
+        int smallNumPos = 0;
+        int bigNumPos = nums.length - 1;
+        while (true) {
+            if (smallNumPos == bigNumPos) {
+                break;
+            }
+
+            int smallBigSum = sortedNums[smallNumPos] + sortedNums[bigNumPos];
+            if (smallBigSum == target) {
+                found = true;
                 break;
             } else {
-                num2Idx.put(b, i);
+                if (smallBigSum > target) {
+                    bigNumPos--;
+                } else {
+                    smallNumPos++;
+                }
+            }
+        }
+
+        if (!found) {
+            return null;
+        }
+
+        int[] twoNum = new int[] { sortedNums[smallNumPos], sortedNums[bigNumPos] };
+        int[] twoNumPos = new int[2];
+        Set<Integer> used = new HashSet<>();
+
+        for (int i = 0; i < twoNum.length; i++) {
+            for (int j = 0; j < nums.length; j++) {
+                if (!used.contains(j)) {
+                    if (twoNum[i] == nums[j]) {
+                        twoNumPos[i] = j;
+                        used.add(j);
+                        break;
+                    }
+                }
             }
 
         }
 
-        return abIdx;
+        return twoNumPos;
     }
 
     public static void main(String[] args) {
-        int[] inp = { 3, 3 };
-        System.out.println("Hello World" + Arrays.toString(new Solution().twoSum(inp, 6)));
+        int[] inp = { 2, 5, 5, 11 };
+        System.out.println("Hello World" + Arrays.toString(new Solution().twoSum(inp, 10)));
     }
 }

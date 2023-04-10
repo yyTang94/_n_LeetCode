@@ -1,4 +1,5 @@
 package medium.array._73_setZeroes;
+
 class Solution {
     public void setZeroes(int[][] matrix) {
         // pre check
@@ -17,7 +18,7 @@ class Solution {
 
         //
         for (int i = 0; i < matrix.length; i++) {
-            
+
         }
 
         return;
